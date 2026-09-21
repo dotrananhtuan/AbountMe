@@ -12,8 +12,8 @@ import {
   SiAntdesign,
   SiJavascript, // Đã đổi sang SimpleIcons cho đồng bộ kích thước với SiTypescript
   SiJira,
-  SiMongodb,
-  SiMysql,
+  // SiMongodb,
+  // SiMysql,
   SiNextdotjs,
   SiPostman,
   SiRedux,
