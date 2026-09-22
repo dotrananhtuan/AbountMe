@@ -1,18 +1,26 @@
 import Starfield from './components/Starfield';
 import TechStack from './components/TechStack';
+import PdfModal from './components/PdfModal'; // Import Modal
+import ContactModal from './components/ContactModal';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false); // State mở Contact
+
   return (
     <div className='page'>
       <Starfield />
       <div className='vignette' />
 
       <header className='nav'>
-        <a href='mailto:tuan@example.com'>Contact</a>
-        <a href='/resume.pdf' target='_blank' rel='noreferrer'>
+        <button className='nav-link-btn' onClick={() => setIsContactOpen(true)}>
+          Contact
+        </button>{' '}
+        <button className='nav-link-btn' onClick={() => setIsResumeOpen(true)}>
           Resume
-        </a>
+        </button>
       </header>
 
       <main className='hero'>
@@ -24,6 +32,15 @@ function App() {
         </p>
         <TechStack />
       </main>
+
+      {/* Modal Contact */}
+      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      {/* Modal Resume */}
+      <PdfModal
+        isOpen={isResumeOpen}
+        onClose={() => setIsResumeOpen(false)}
+        pdfUrl={process.env.PUBLIC_URL + '/resume.pdf'}
+      />
     </div>
   );
 }
