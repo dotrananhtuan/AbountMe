@@ -135,7 +135,7 @@ body {
 .tech-icon.is-lit {
   color: var(--tech-color);
   transform: translateY(-4px) scale(1.15); /* Hiệu ứng nổi bật nhẹ khi di chuột */
-  filter: drop-shadow(0 0 8px var(--tech-color));
+  /* filter: drop-shadow(0 0 8px var(--tech-color)); */
 }
 
 @media (max-width: 640px) {

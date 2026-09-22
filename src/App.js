@@ -18,7 +18,7 @@ function App() {
       <main className='hero'>
         <h1 className='hero-name'>DO TRAN ANH TUAN</h1>
         <p className='hero-bio'>
-          Hey, I&apos;m Tuan — you can call me Harold. I&apos;m obsessed with large-scale systems,
+          Hey, I&apos;m Tuan — you can call me Andrew. I&apos;m obsessed with large-scale systems,
           and I love turning a messy idea into something that&apos;s fast, secure, and built to
           scale.
         </p>
